@@ -1,0 +1,75 @@
+@use 'src/styles/colours' as colour;
+@use 'src/styles/fonts' as font;
+
+.navbar-brand {
+	color: colour.$white-1;
+	font-family: font.$tertiary;
+	font-size: 31px;
+	font-weight: 700;
+	margin-right: 27px;
+}
+
+.container-fluid {
+	padding: auto 20px;
+}
+
+.navbar-toggler {
+	margin-right: 27px;
+	transition: all 0.4s;
+	
+	&, &:focus {
+		outline: none;
+		border: none;
+		box-shadow: none;
+	}
+
+	&:not(.collapsed) {
+		transform: rotate(90deg) scale(140%);
+	}
+}
+
+#navbarToggler {
+	@media only screen and (max-width: 767px) {
+		position: fixed;
+		top: 100px;
+		left: 0;
+		right: 0;
+		width: 100vw;
+		background-color: colour.$dark-2;
+	}
+
+	.navbar-nav {
+		padding: 28px 27px;
+	}
+}
+
+.nav-item {
+	&, .nav-link {
+		font-family: font.$tertiary;
+		font-size: 31px;
+		color: colour.$white-1;
+	}
+
+	&:hover, & .nav-link:hover {
+		filter: brightness(120%);
+		color: colour.$white-1;
+	}
+
+	& .nav-link:not(.active) {
+		filter: brightness(68%);
+	}
+	
+	@media only screen and (max-width: 767px) {
+		&, .nav-link {
+			padding: 0;
+			margin: 0;
+		}
+		&:not(:last-of-type) {
+			margin-bottom: 15px !important;
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		margin-right: 27px;
+	}
+}

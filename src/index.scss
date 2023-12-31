@@ -1,0 +1,6 @@
+@use 'src/styles/fonts' as font;
+
+*, *::before, *::after {
+	font-family: font.$secondary,
+		'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

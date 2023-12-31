@@ -1,0 +1,91 @@
+@use 'src/styles/colours' as colour;
+@use 'src/styles/fonts' as font;
+
+.container {
+	@media only screen and (min-width: 992px) {
+		display: flex;
+		flex-direction: row;
+		height: 100vh;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.logo {
+	height: 150px;
+	width: 150px;
+	display: block;
+	margin: auto;
+	margin-top: 150px;
+
+	@media only screen and (min-width: 768px) {
+		height: 345px;
+		width: 345px;
+
+		@media only screen and (min-width: 992px) {
+			height: 575px;
+			width: 575px;
+			margin: 0;
+		}
+	}
+}
+
+.ganesh {
+	user-select: none;
+	height: 51px;
+	width: 51px;
+	position: absolute;
+	top: 100px;
+	right: 0;
+
+	@media only screen and (min-width: 768px) {
+		height: 107px;
+		width: 107px;
+
+		@media only screen and (min-width: 992px) {
+			height: 149px;
+			width: 149px;
+		}
+	}
+}
+
+.desc {
+	text-align: center;
+	margin: 7px 20px;
+	padding: 0 30px;
+	font-family: font.$secondary;
+
+	@media only screen and (min-width: 768px) {
+		font-size: 44px;
+	}
+}
+
+.button {
+	&, &:hover, &:focus, &:active {
+		color: colour.$white-1;
+		background-color: colour.$pink-1 !important;
+		display: block;
+		margin: auto;
+		width: 90%;
+		margin-top: 20px;
+		font-size: 32px;
+		font-family: font.$primary;
+		border-radius: 15px;
+		border: 2.3px solid colour.$white-1;
+	}
+
+	&:hover, &:focus, &:active {
+		filter: brightness(120%) contrast(110%);
+	}
+
+	@media only screen and (min-width: 768px) {
+		&, &:hover, &:focus, &:active {
+			font-size: 56px;
+			width: 575px;
+
+			@media only screen and (min-width: 992px) {
+				width: 410px;
+			}
+		}
+	}
+}

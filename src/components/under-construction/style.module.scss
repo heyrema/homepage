@@ -1,0 +1,53 @@
+@use 'src/styles/colours' as colour;
+@use 'src/styles/fonts' as font;
+
+.container {
+	position: fixed;
+	top: 120px;
+	text-align: center;
+	width: 100vw;
+	font-size: 30px;
+	z-index: 1500;
+	user-select: none;
+
+	.text {
+		margin: auto;
+		padding: 10px;
+		border-radius: 8px;
+		width: fit-content;
+		background-color: colour.$pink-2;
+		animation: shake 0.1s ease infinite;
+		
+		@media only screen and (min-width: 768px) {
+			transform: translateX(-2ex);
+			
+			@media only screen and (min-width: 992px) {
+				transition: opacity 0.2s;
+				opacity: 40%;
+				
+				&:hover {
+					opacity: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+@keyframes shake {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	33% {
+		transform: rotate(0.75deg);
+	}
+
+	67% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(-0.75deg);
+	}
+}
