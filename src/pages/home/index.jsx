@@ -1,3 +1,6 @@
+
+import { Link } from 'react-router-dom';
+
 import * as styles from './style.module.scss';
 
 import homeLogo from '../../assets/home-logo.png';
@@ -22,9 +25,11 @@ function Home() {
 					<br/>
 					certifications for all, since 2021.
 				</div>
-				<button data-bs-theme="dark" className={`btn ${styles.button}`}>
-					Request a Quote
-				</button>
+				<Link to="/contact">
+					<button data-bs-theme="dark" className={`btn ${styles.button}`}>
+						Request a Quote
+					</button>
+				</Link>
 			</div>
 		</div>
 		<div className={`${styles.container} ${styles.part_2}`}>

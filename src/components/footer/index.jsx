@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import * as styles from './style.module.scss';
 import './style.scss';
 
@@ -5,15 +7,15 @@ const Footer = () => {
 	return <>
 		<footer className={styles.footer}>
 			<div className={styles.links}>
-				<a href="/about" className={styles.link}>
+				<Link to="/about" className={styles.link}>
 					About
-				</a>
-				<a href="/contact" className={styles.link}>
+				</Link>
+				<Link to="/contact" className={styles.link}>
 					Contact
-				</a>
-				<a href="/github" className={styles.link}>
+				</Link>
+				<Link to="/github" className={styles.link}>
 					GitHub
-				</a>
+				</Link>
 			</div>
 			<div className={styles.copyright}>
 				&copy; Rema 2021-{new Date().getFullYear()}
