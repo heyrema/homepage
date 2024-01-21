@@ -1,0 +1,14 @@
+@use 'src/styles/colours' as colour;
+@use 'src/styles/fonts' as font;
+
+a {
+	& {
+		color: colour.$white-1;
+		filter: brightness(90%);
+	}
+
+	&:hover, &:focus, &:active {
+		filter: brightness(100%);
+		color: colour.$white-1;
+	}
+}

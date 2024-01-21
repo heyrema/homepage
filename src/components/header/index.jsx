@@ -21,6 +21,9 @@ const Header = () => {
 						<a className="nav-link p-0 active" aria-current="page" href="/">Home</a>
 					</li>
 					<li className="nav-item">
+						<a className="nav-link p-0" href="/docs">Docs</a>
+					</li>
+					<li className="nav-item">
 						<a className="nav-link p-0" href="/about">About</a>
 					</li>
 					<li className="nav-item">

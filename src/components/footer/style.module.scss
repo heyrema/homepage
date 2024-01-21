@@ -1,0 +1,64 @@
+@use 'src/styles/colours' as colour;
+@use 'src/styles/fonts' as font;
+
+.footer {
+	padding: 29px 0;
+	height: 108px;
+	background-color: colour.$dark-3;
+	color: colour.$white-1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 6px;
+
+	@media only screen and (min-width: 768px) {
+		padding: 30px 0;
+		flex-direction: row;
+		justify-content: center;
+		gap: 221px;
+		height: 160px;
+
+		@media only screen and (min-width: 992px) {
+			height: 275px;
+			padding: 53px 0;
+			gap: 383px;
+		}
+	}
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 20px;
+	font-family: font.$primary;
+	font-size: 17px;
+
+	@media only screen and (min-width: 768px) {
+		flex-direction: column;
+		gap: 15px;
+
+
+		@media only screen and (min-width: 992px) {
+			font-size: 31px
+		}
+	}
+}
+
+.link {
+	filter: brightness(90%);
+
+	&:hover, &:active, &:focus {
+		filter: brightness(100%);
+	}
+}
+
+.copyright {
+	font-size: 13px;
+	font-family: font.$secondary;
+	font-weight: 500;
+
+	@media only screen and (min-width: 992px) {
+		font-size: 23px;
+	}
+}
