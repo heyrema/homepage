@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import * as styles from './style.module.scss';
 import vectorLogo from '../../assets/logo.svg';
@@ -11,6 +12,9 @@ function Error({ type = '404' }) {
 	return <>
 		<Header/>
 		<div className={`${styles.container}`}>
+			<Helmet>
+				<title>Rema - {type === '404' ? '404 - Not Found' : 'Error'}</title>
+			</Helmet>
 			<h1>{type === '404' ? '404 - Not Found' : 'Error'}</h1>
 			<h2>
 				{type === '404' ? 'The page you are trying to access is invalid or has been moved/expired.' : 'An unknown mishap happened.'}

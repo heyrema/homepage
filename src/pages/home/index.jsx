@@ -1,4 +1,4 @@
-
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 import * as styles from './style.module.scss';
@@ -16,6 +16,9 @@ import Footer from '../../components/footer';
 function Home() {
 	return <>
 		<Header/>
+		<Helmet>
+			<title>Rema - Home</title>
+		</Helmet>
 		<div className={`${styles.container} ${styles.part_1}`}>
 			<img src={ganesh} className={styles.ganesh} />
 			<img src={homeLogo} className={styles.logo} />

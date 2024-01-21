@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import * as styles from './style.module.scss';
 import vectorLogo from '../../assets/logo.svg';
@@ -20,6 +21,9 @@ function Contact() {
 	return <>
 		<Header/>
 		<div className={`${styles.container}`}>
+			<Helmet>
+				<title>Rema - Contact</title>
+			</Helmet>
 			<h1>Contact</h1>
 			<h4>
 				For requesting a quote or any other enquiries, contact us on <a href="mailto:contact@heyrema.com">contact@heyrema.com</a>, or fill the form below:

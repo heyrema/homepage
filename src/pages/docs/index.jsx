@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import * as styles from './style.module.scss';
 import vectorLogo from '../../assets/logo.svg';
@@ -17,6 +18,9 @@ function Docs() {
 	return <>
 		<Header/>
 		<div className={`${styles.container}`}>
+			<Helmet>
+				<title>Rema - Documentation</title>
+			</Helmet>
 			<h1>Documentation</h1>
 			<h2>
 				Redirecting...

@@ -13,9 +13,9 @@ const Footer = () => {
 				<Link to="/contact" className={styles.link}>
 					Contact
 				</Link>
-				<Link to="/github" className={styles.link}>
+				<a target="_blank" href="https://github.com/heyrema" className={styles.link}>
 					GitHub
-				</Link>
+				</a>
 			</div>
 			<div className={styles.copyright}>
 				&copy; Rema 2021-{new Date().getFullYear()}

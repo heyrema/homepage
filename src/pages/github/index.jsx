@@ -17,6 +17,9 @@ function GitHub() {
 	return <>
 		<Header/>
 		<div className={`${styles.container}`}>
+			<Helmet>
+				<title>Rema - GitHub</title>
+			</Helmet>
 			<h1>GitHub</h1>
 			<h2>
 				Redirecting...

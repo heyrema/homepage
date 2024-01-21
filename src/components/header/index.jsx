@@ -23,7 +23,7 @@ const Header = () => {
 						<NavLink className="nav-link p-0" to="/">Home</NavLink>
 					</li>
 					<li className="nav-item">
-						<NavLink className="nav-link p-0" to="/docs">Docs</NavLink>
+						<a className="nav-link p-0" href="https://rema.js.org" target="_blank">Docs</a>
 					</li>
 					<li className="nav-item">
 						<NavLink className="nav-link p-0" to="/about">About</NavLink>

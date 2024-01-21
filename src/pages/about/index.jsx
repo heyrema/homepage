@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async';
+
 import * as styles from './style.module.scss';
 import vectorLogo from '../../assets/logo.svg';
 
@@ -9,6 +11,9 @@ function About() {
 	return <>
 		<Header/>
 		<div className={`${styles.container}`}>
+			<Helmet>
+				<title>Rema - About</title>
+			</Helmet>
 			<h1>About</h1>
 			<h2>
 				Managing and distributing certifications for all, since 2021.
